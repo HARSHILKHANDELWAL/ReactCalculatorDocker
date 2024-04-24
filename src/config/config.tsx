@@ -14,7 +14,7 @@ export function postConfig(jsonArray: any) {
 console.log(user,pass,"")
 
 
-return axios.post('http://localhost:8081/CalculatorBackendJenkins/CalculatorController', jsonArray,{
+return axios.post('http://localhost:8081/ApiTest/CalculatorController', jsonArray,{
   
   headers: {
     'Authorization': 'Basic ' + btoa(user + ':' + pass)
@@ -54,7 +54,7 @@ pass=''
   //Buffer is not supported by run time envioremnt you need to iimport and install this
   //working is same as btoa (binary to ascii)
   // http://localhost:8080/reactcalculatorbackend/user/logout
-  return axios.post('http://localhost:8081/CalculatorBackendJenkins/user/logout',
+  return axios.post('http://localhost:8081/ApiTest/user/logout',
    {
     headers: {
       'Content-Type': 'application/json',
