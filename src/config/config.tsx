@@ -25,26 +25,23 @@ return axios.post('http://localhost:8081/ApiTest/CalculatorController', jsonArra
   )
 }
 
-export function loginConfig(username:any,password:any) {
-  console.log(username,password)
- user=username;
- pass=password;
+export function loginConfig(Username:any,Password:any) {
+  console.log(Username,Password)
+ user=Username;
+ pass=Password;
 
   //Buffer is not supported by run time envioremnt you need to iimport and install this
   //working is same as btoa (binary to ascii)
   // http://localhost:8080/reactcalculatorbackend/
-  return axios.post('http://localhost:8081/ApiTest/login',
+  return axios.get('http://localhost:8081/ApiTest/login',
    {
     headers: {
-      'Authorization': 'Basic ' + btoa(user + ':' + pass)
+      'Authorization': 'Basic ' + btoa(Username + ':' + Password)
     }  
      
 
   }
-  ).then((response)=>{
-    token=response.data.accessToken;
-console.log(response.data.accessToken)
-  });
+  )
 }
 export function logout() {
   window.localStorage.removeItem("jwtToken");

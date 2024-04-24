@@ -25,6 +25,7 @@ export default class LoginController extends React.Component<{}> {
      
 
         loginConfig(formJson.username,formJson.password).then(response => {
+          console.log(response)
           this.setState({ LoggedIn:true });
 
          }).catch((error:any)=>{
