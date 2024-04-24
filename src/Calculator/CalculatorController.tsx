@@ -16,6 +16,8 @@ interface state {
 }
 export default class CalculatorController extends React.Component<ICalculatorControllerProps, state> {
 
+
+    console.log("We are testing jenkins file")
     functionButtons = functionBttns;
     updatedValue = '';
     currentValue:any;

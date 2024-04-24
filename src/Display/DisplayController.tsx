@@ -7,7 +7,7 @@ export interface IDisplayControllerProps {
 export default class DisplayController extends React.Component<IDisplayControllerProps> {
   public render() {
 
-    // console.log(this.props.value)
+    console.log(this.props.value)
     return (
   <div className='calc-screen'>
     <input type="text"  id="calScreen" value={this.props.value} readOnly />
