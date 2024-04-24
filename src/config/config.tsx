@@ -12,14 +12,14 @@ let token:'';
 
 export function postConfig(jsonArray: any) {
 console.log(user,pass,"")
-    // headers: {
-    //   'Authorization': 'Basic ' + btoa(user + ':' + pass)
-    // }  
-  
 
-  return axios.post('http://localhost:8081/CalculatorBackendJwt/CalculatorController', jsonArray,{
+
+return axios.post('http://localhost:8081/CalculatorBackendJenkins/CalculatorController', jsonArray,{
   
-       headers: {"Authorization" : `Bearer ${token}`} 
+  headers: {
+    'Authorization': 'Basic ' + btoa(user + ':' + pass)
+  }  
+     
 
   }
   )
@@ -33,9 +33,12 @@ export function loginConfig(username:any,password:any) {
   //Buffer is not supported by run time envioremnt you need to iimport and install this
   //working is same as btoa (binary to ascii)
   // http://localhost:8080/reactcalculatorbackend/
-  return axios.post('http://localhost:8080/DemoJwtAuthentication/api/auth/signin',
+  return axios.post('http://localhost:8081/CalculatorBackendJenkins/login',
    {
-    username,password
+    headers: {
+      'Authorization': 'Basic ' + btoa(user + ':' + pass)
+    }  
+     
 
   }
   ).then((response)=>{
@@ -51,7 +54,7 @@ pass=''
   //Buffer is not supported by run time envioremnt you need to iimport and install this
   //working is same as btoa (binary to ascii)
   // http://localhost:8080/reactcalculatorbackend/user/logout
-  return axios.post('http://localhost:8080/DemoJwtAuthentication/api/auth/logout',
+  return axios.post('http://localhost:8081/CalculatorBackendJenkins/user/logout',
    {
     headers: {
       'Content-Type': 'application/json',
