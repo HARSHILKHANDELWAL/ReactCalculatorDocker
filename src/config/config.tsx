@@ -33,7 +33,7 @@ export function loginConfig(username:any,password:any) {
   //Buffer is not supported by run time envioremnt you need to iimport and install this
   //working is same as btoa (binary to ascii)
   // http://localhost:8080/reactcalculatorbackend/
-  return axios.post('http://localhost:8081/CalculatorBackendJenkins/login',
+  return axios.post('http://localhost:8081/ApiTest/login',
    {
     headers: {
       'Authorization': 'Basic ' + btoa(user + ':' + pass)
