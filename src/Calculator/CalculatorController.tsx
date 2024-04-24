@@ -37,6 +37,7 @@ export default class CalculatorController extends React.Component<ICalculatorCon
     
     //numButtonHandler
     numButtonClickHandler = (button:any) => {
+        console.log("num button clicker")
         console.log("numButtonClickHandler")
         console.log(button,"numbutton")
         this.buttonArray.push({ "type": button.type, "value": button.value })
