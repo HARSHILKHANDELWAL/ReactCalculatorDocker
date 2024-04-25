@@ -48,20 +48,30 @@ pipeline {
            stage('Build_2'){
           steps{
                 bat 'npm install'
-                bat 'npm start'
+                bat 'start npm start'
           }
       
       }
-        
-        //    stage('Demo Approval'){
-        //         input{
-        //             message 'Pause for Demo: Click "Proceed" to continue.'
-        //             ok 'Proceed'
-        //         }
-        //         steps{
-        //             echo 'Demo Approved. Resuming the pipeline'
-        //         }
-        //     }
+      
+
+      //SELENIUM
+     stage('Clone') {
+        steps {
+            dir('C:\\Users\\Harshil\\.jenkins\\workspace\\Selenium Testing') {
+                git 'https://github.com/HARSHILKHANDELWAL/SeleniumJenkins.git'
+                bat 'mvn test'
+             }
+        }
+      }
+    stage('Demo Approval'){
+         input{
+            message 'Pause for Demo: Click "Proceed" to continue.'
+            ok 'Proceed'
+         }
+        steps{
+             echo 'Demo Approved. Resuming the pipeline'
+            }
+     }
     }
     
    
