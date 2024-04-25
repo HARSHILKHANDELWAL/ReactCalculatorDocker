@@ -54,14 +54,14 @@ onSubmit={this.handleSubmit}>
     <div className="content">
       <div className="input-field">
      
-        <input type="text" placeholder="Username" name="username"/>
+        <input type="text" id='username' placeholder="Username" name="username"/>
       </div>
       <div className="input-field">
-        <input type="password" placeholder="Password" name='password'  />
+        <input type="password" id='password' placeholder="Password" name='password'  />
       </div>
 
     </div>
-      <button className="button" type="submit">Login</button>
+      <button className="button" id='login-Button' type="submit">Login</button>
   </form>
 </div>
  

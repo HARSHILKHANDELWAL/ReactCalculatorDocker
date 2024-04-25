@@ -163,7 +163,7 @@ logout=()=>{
 
                 </div>
                 </div>
-  <button className='redo' onClick={this.logout}>Logout</button>
+  <button className='redo' id='logoutButton' onClick={this.logout}>Logout</button>
 
             </div>
         );
