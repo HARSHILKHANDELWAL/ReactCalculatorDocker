@@ -41,6 +41,7 @@ export default class CalculatorController extends React.Component<ICalculatorCon
         console.log("testing jenkins scm")
         console.log("numButtonClickHandler")
         console.log("numButtonClickHandler")
+        console.log("numButton25thClickHandler")
 
         console.log(button,"numbutton")
         this.buttonArray.push({ "type": button.type, "value": button.value })
