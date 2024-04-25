@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Build your React project
-         bat 'copy C:\\Users\\Harshil\\.jenkins\\workspace\\GentratingWarFile\\target\\ApiTest.war C:\\Projects\\Software\\apache-tomcat-10.1.17\\webapps\\'
+         bat 'copy C:\\Users\\Harshil\\.jenkins\\workspace\\GentratingWarFileSCM\\target\\ApiTest.war C:\\Projects\\Software\\apache-tomcat-10.1.17\\webapps\\'
 
             }
         }
