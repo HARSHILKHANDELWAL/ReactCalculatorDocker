@@ -57,6 +57,7 @@ pipeline {
       //SELENIUM
       //Testinh
       //Testing
+      //testing
      stage('Clone') {
         steps {
             dir('C:\\Users\\Harshil\\.jenkins\\workspace\\Selenium Testing') {
